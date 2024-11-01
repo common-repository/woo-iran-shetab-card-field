@@ -1,0 +1,51 @@
+{
+    "landingPage": "\/wp-admin\/widgets.php",
+    "preferredVersions": {
+        "php": "8.3",
+        "wp": "6.4"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org\/plugins",
+                "slug": "woocommerce"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org\/plugins",
+                "slug": "my-imaginary-plugin"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "installTheme",
+            "themeZipFile": {
+                "resource": "wordpress.org\/themes",
+                "slug": "twentytwentyone"
+            }
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "some_required_option_1": "your_favorite_values",
+                "some_required_option_2": "your_favorite_values"
+            }
+        }
+    ]
+}
